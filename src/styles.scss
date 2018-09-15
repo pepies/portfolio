@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+}
+
+//sidebar
+
+.sidebar {
+  background-color: #233250;
+
+  ul {
+    padding: 0;
+
+    a,
+    a:visited,
+    a:focus {
+      color: white;
+      text-decoration: none;
+      outline: none;
+    }
+  }
+
+  li {
+    padding: 15px 40px;
+    list-style: none;
+  }
+}
+
+// Close button
+
+svg {
+  position: relative;
+  cursor: pointer;
+}
+
+svg path{
+  stroke-width: 20;
+  stroke-linecap: round;
+  stroke: #233250;
+  fill: none;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/* In menu form */
+
+.top_bar,
+.bottom_bar{
+  stroke-dasharray: 240px 910px;
+}
+
+.middle_bar{
+  stroke-dasharray: 240px 240px;
+}
+
+/* In cross form */
+
+.open .top_bar,
+.open .bottom_bar{
+  stroke-dashoffset: -650px;
+}
+
+.open .middle_bar{
+  stroke-dasharray: 0px 220px;
+  stroke-dashoffset: -120px;
+}
