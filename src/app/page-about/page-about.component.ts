@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InstagramService } from '../services/instagram.service';
+
 
 @Component({
   selector: 'app-page-about',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageAboutComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private InstagramService: InstagramService ) {
   }
 
+  photos: string;
+
+  ngOnInit() {
+    this.photos = this.InstagramService.getJSON();
+  }
 }
