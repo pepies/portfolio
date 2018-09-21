@@ -1,1 +1,7 @@
-{{user}}
+<div class="grid-x">
+  <div *ngFor="let photo of photos.data" class="cell small-12 medium-6 large-4">
+    <img src="{{photo.images.standard_resolution.url}}" >
+  </div>
+</div>
+
+

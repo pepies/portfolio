@@ -1,13 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
-  margin: 0;
-  font-family: codec;
-}
+@import "assets/css/foundation.min.css";
 
 @font-face {
   font-family: "codec";
 	src: url("assets/fonts/codec.ttf") format("truetype"),
+}
+//Global styles where normalize do not take place
+
+body {
+  font-family: "codec";
+  color: #233250;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  transition: 500ms;
+  width: 300px;
+  padding: 2em;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1.2rem;
+  display: inline-block;
+
+  span{
+    color: #233250;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(35, 50, 80, 1);
+    transition: 500ms;
+  }
+
+  &:hover {
+    -moz-box-shadow: inset 0px 9px 20px 0px rgba(143,143,143,0.5);
+    -webkit-box-shadow: inset 0px 9px 20px 0px rgba(143,143,143,0.5);
+    box-shadow: inset 0px 9px 20px 0px rgba(143,143,143,0.5);
+    -moz-text-shadow: 0 7px 7px rgba(143,143,143,0.5);
+    -webkit-text-shadow: 0 7px 7px rgba(143,143,143,0.5);
+    text-shadow: 0 7px 7px rgba(143,143,143,0.5);
+
+    span{
+      border-bottom: 1px solid rgba(35, 50, 80, 0.1);
+    }
+  }
 }
 
 //sidebar

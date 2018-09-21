@@ -8,6 +8,8 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { PageContactComponent } from './page-contact/page-contact.component';
 import { SidebarModule } from 'ng-sidebar';
 import { InstagramService } from './services/instagram.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PageReferencesComponent } from './page-references/page-references.component';
 
 
 @NgModule({
@@ -16,8 +18,10 @@ import { InstagramService } from './services/instagram.service';
     PageAboutComponent,
     PageHomeComponent,
     PageContactComponent,
+    PageReferencesComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SidebarModule.forRoot()
