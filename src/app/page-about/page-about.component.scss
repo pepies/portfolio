@@ -1,0 +1,12 @@
+.corner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255,255,255,0.5);
+  background: -moz-linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,2.3) 70%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(135deg, rgba(255,255,255,0.5) 0,rgba(255,255,255,0.2) 70%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(255,255,255,0.5) 0,rgba(255,255,255,0.2) 70%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

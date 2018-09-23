@@ -10,7 +10,8 @@ import { SidebarModule } from 'ng-sidebar';
 import { InstagramService } from './services/instagram.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PageReferencesComponent } from './page-references/page-references.component';
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,13 @@ import { PageReferencesComponent } from './page-references/page-references.compo
     PageHomeComponent,
     PageContactComponent,
     PageReferencesComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     SidebarModule.forRoot()
   ],
   providers: [

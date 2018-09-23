@@ -4,7 +4,7 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { PageContactComponent } from "./page-contact/page-contact.component";
 import { PageAboutComponent } from './page-about/page-about.component';
 import { PageReferencesComponent } from './page-references/page-references.component';
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'references',
     component: PageReferencesComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   },
 ];
 

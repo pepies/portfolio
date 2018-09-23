@@ -26,6 +26,10 @@ li {
   font-size: 1.2rem;
   display: inline-block;
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   span{
     color: #233250;
     text-decoration: none;
@@ -76,20 +80,34 @@ li {
   }
 }
 
-// Close button
+.hamburger {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  height: unset;
 
-svg {
-  position: relative;
-  cursor: pointer;
-}
 
-svg path{
-  stroke-width: 20;
-  stroke-linecap: round;
-  stroke: #233250;
-  fill: none;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  // Close button
+
+  svg {
+    position: relative;
+    cursor: pointer;
+  }
+
+  svg path{
+    stroke-width: 20;
+    stroke-linecap: round;
+    stroke: #233250;
+    fill: none;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  &.open {
+    svg path {
+      stroke: white;
+    }
+  }
 }
 
 /* In menu form */

@@ -1,3 +1,18 @@
-<p>
-  page-contact works!
-</p>
+<div class="center">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <ul>
+      <li>
+        <input type="text" name="contact" maxlength="100" formControlName="customerContact" placeholder="Contact on you"
+        [class.error]="contactForm.controls.customerContact.errors && (contactForm.touched || contactForm.dirty)">
+      </li>
+      <li *ngIf="isPhone(contactForm.controls.customerContact)">
+        <input type="text" name="time" maxlength="100" formControlName="customerTime"
+        placeholder="When may I call you ?">
+      </li>
+      <li>
+        <textarea name="textarea" formControlName="customerMessage" placeholder="Message.."></textarea>
+      </li>
+    </ul>
+    <button type="submit" class="btn" [disabled]="!contactForm.valid">Send this</button>
+  </form>
+</div>

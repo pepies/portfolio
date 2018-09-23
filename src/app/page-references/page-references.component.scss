@@ -4,11 +4,11 @@
 
 .card {
   width: 300px;
-  height: 500px;
+  height: 510px;
   margin: 30px auto;
-  -webkit-box-shadow: 0px 9px 32px 0px rgba(143,143,143,0.5);
-  -moz-box-shadow: 0px 9px 32px 0px rgba(143,143,143,0.5);
-  box-shadow: 0px 9px 32px 0px rgba(143,143,143,0.5);
+  -webkit-box-shadow: 0px 9px 32px 0px rgba(143,143,143,0.4);
+  -moz-box-shadow: 0px 9px 32px 0px rgba(143,143,143,0.4);
+  box-shadow: 0px 9px 32px 0px rgba(143,143,143,0.4);
   border: none;
   transition: 300ms;
 
@@ -19,8 +19,27 @@
   }
 }
 
+.card-section {
+  padding-bottom: 0;
+}
+
+.card-divider {
+  padding: 0.5rem 1rem;
+  background: none;
+}
+
 .center {
   text-align: center;
   margin: 80px auto;
   font-size: 1.2rem;
+}
+
+.technologies {
+  width: 100%;
+  text-align: right;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  color: rgba(143,143,143,1);
+  text-transform: uppercase;
 }
