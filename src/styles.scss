@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "variables";
 @import "assets/css/foundation.min.css";
 
 @font-face {
@@ -10,31 +10,41 @@
 
 body {
   font-family: "codec";
-  color: #233250;
+  color: $darkblue;
 }
 
 li {
   list-style: none;
 }
 
+a {
+  outline: none;
+}
+
 .btn {
-  transition: 500ms;
+  transition: 300ms;
   width: 300px;
   padding: 2em;
   border-radius: 3px;
   text-align: center;
   font-size: 1.2rem;
   display: inline-block;
+  cursor: pointer;
 
   &:disabled {
     cursor: not-allowed;
+
+    span {
+      color: grey;
+      border-bottom: 1px solid grey;
+    }
   }
 
-  span{
-    color: #233250;
+  span {
+    color: $darkblue;
     text-decoration: none;
-    border-bottom: 1px solid rgba(35, 50, 80, 1);
-    transition: 500ms;
+    border-bottom: 1px solid #323d47;
+    transition: 300ms;
   }
 
   &:hover {
@@ -44,22 +54,42 @@ li {
     -moz-text-shadow: 0 7px 7px rgba(143,143,143,0.5);
     -webkit-text-shadow: 0 7px 7px rgba(143,143,143,0.5);
     text-shadow: 0 7px 7px rgba(143,143,143,0.5);
+    // border-bottom: grey 1px solid;
 
-    span{
+    span {
       border-bottom: 1px solid rgba(35, 50, 80, 0.1);
     }
+  }
+
+  &:active {
+    padding: 2.2em 2em 1.8em;
+    text-shadow: 0 0 1px rgba(143,143,143,1);
   }
 }
 
 //sidebar
 
 .sidebar {
-  background-color: #233250;
+  background-color: $darkblue;
 
-  img {
-    width: 100px;
-    margin: 50px;
-  }
+  a {
+    img {
+      width: 140px;
+      margin: 50px;
+      -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+      filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+      transition: 200ms;
+
+    }
+
+    &:active {
+        img {
+          -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,1));
+          filter: drop-shadow(0px 0px 0px rgba(0,0,0,1));
+          margin: 52px 48px 48px 52px;
+        }
+      }
+    }
 
   ul {
     padding: 0;
@@ -69,7 +99,6 @@ li {
     a:focus {
       color: white;
       text-decoration: none;
-      outline: none;
     }
   }
 
@@ -97,7 +126,7 @@ li {
   svg path{
     stroke-width: 20;
     stroke-linecap: round;
-    stroke: #233250;
+    stroke: $darkblue;
     fill: none;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;

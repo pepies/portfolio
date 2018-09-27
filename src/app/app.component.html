@@ -16,9 +16,10 @@
     sidebarClass="sidebar"
     dock="false"
   >
-  <img src="assets/img/profile.png" alt="profile picture">
+    <a (click)="_menuItemCloseSidebar()" routerLink="/">
+      <img src="assets/img/portait.svg" alt="That's me">
+    </a>
     <ul>
-      <li><a (click)="_menuItemCloseSidebar()" routerLink="/">Home</a></li>
       <li><a (click)="_menuItemCloseSidebar()" routerLink="/references">What I do</a></li>
       <li><a (click)="_menuItemCloseSidebar()" routerLink="/contact">Get in touch</a></li>
       <li><a (click)="_menuItemCloseSidebar()" routerLink="/about">My life</a></li>

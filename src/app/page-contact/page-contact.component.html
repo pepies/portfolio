@@ -1,4 +1,6 @@
 <div class="center">
+  <br>
+    <h2>Write me, I'll be happy.</h2>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <ul>
       <li>
@@ -13,6 +15,8 @@
         <textarea name="textarea" formControlName="customerMessage" placeholder="Message.."></textarea>
       </li>
     </ul>
-    <button type="submit" class="btn" [disabled]="!contactForm.valid">Send this</button>
+    <button type="submit" class="btn" [disabled]="!contactForm.valid">
+      <span>{{status}}</span>
+    </button>
   </form>
 </div>

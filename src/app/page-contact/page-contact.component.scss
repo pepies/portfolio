@@ -5,7 +5,7 @@
 form {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   max-width:600px;
-  margin:50px auto;
+  margin: 0 auto;
   padding:20px;
 }
  ul{
@@ -41,15 +41,15 @@ form {
   transition: 300ms;
 
   &.error {
-    -webkit-box-shadow: 0px 9px 32px 0px rgba(255, 38, 38, 0.4);
-    -moz-box-shadow: 0px 9px 32px 0px rgba(255, 38, 38,0.4);
-    box-shadow: 0px 9px 32px 0px rgba(255, 38, 38,0.4);
+    -webkit-box-shadow: 0px 9px 32px 0px rgba(255, 38, 38,0.6);
+    -moz-box-shadow: 0px 9px 32px 0px rgba(255, 38, 38,0.6);
+    box-shadow: 0px 9px 32px 0px rgba(255, 38, 38,0.6);
   }
 
-  &.ng-valid {
-    -webkit-box-shadow: 0px 9px 32px 0px rgba(110, 187, 99, 0.4);
-    -moz-box-shadow: 0px 9px 32px 0px rgba(110, 187, 99,0.4);
-    box-shadow: 0px 9px 32px 0px rgba(110, 187, 99,0.4);
+  &.ng-valid.ng-touched {
+    -webkit-box-shadow: 0px 9px 32px 0px rgba(110, 187, 99, 0.6);
+    -moz-box-shadow: 0px 9px 32px 0px rgba(110, 187, 99,0.6);
+    box-shadow: 0px 9px 32px 0px rgba(110, 187, 99,0.6);
   }
 }
  input[type="text"]:focus,
@@ -68,15 +68,15 @@ form {
   box-shadow: 0px 9px 32px 0px rgba(143,143,143,0.6);
 
   &.error {
-    -webkit-box-shadow: 0px 9px 32px 0px rgba(255, 38, 38,0.6);
-    -moz-box-shadow: 0px 9px 32px 0px rgba(255, 38, 38,0.6);
-    box-shadow: 0px 9px 32px 0px rgba(255, 38, 38,0.6);
+    -webkit-box-shadow: 0px 9px 32px 0px rgba(141, 136, 136, 0.4);
+    -moz-box-shadow: 0px 9px 32px 0px rgba(141, 136, 136, 0.4);
+    box-shadow: 0px 9px 32px 0px rgba(141, 136, 136, 0.4);
   }
 
   &.ng-valid {
-    -webkit-box-shadow: 0px 9px 32px 0px rgba(110, 187, 99, 0.6);
-    -moz-box-shadow: 0px 9px 32px 0px rgba(110, 187, 99,0.6);
-    box-shadow: 0px 9px 32px 0px rgba(110, 187, 99,0.6);
+    -webkit-box-shadow: 0px 9px 32px 0px rgba(133, 139, 133, 0.4);
+    -moz-box-shadow: 0px 9px 32px 0px rgba(133, 139, 133, 0.4);
+    box-shadow: 0px 9px 32px 0px rgba(133, 139, 133, 0.4);
   }
 }
 

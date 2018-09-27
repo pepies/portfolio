@@ -11,10 +11,10 @@ export class AppComponent {
   private _language: string = "sk";
 
   //sidebar attributes
-  private _opened: boolean;
-  private _mode: string;
-  private _width: number = 1025;
-  private _clickOutsideClose: boolean;
+  public _opened: boolean;
+  public _mode: string;
+  public _width: number = 1025;
+  public _clickOutsideClose: boolean;
 
   ngOnInit() {
     this._changeMenuOpenMode(window.innerWidth);
@@ -28,14 +28,14 @@ export class AppComponent {
   /**
    * change sidebar view/hide
    */
-  private _toggleSidebar() {
+  public _toggleSidebar() {
     this._opened = !this._opened;
   }
 
   /**
    * Close menu on clickRouting - disable at large
    */
-  private _menuItemCloseSidebar() {
+  public _menuItemCloseSidebar() {
     if(window.innerWidth < this._width)
     this._opened = !this._opened;
   }
@@ -44,7 +44,7 @@ export class AppComponent {
    * Change menu parameters based on device size
    * @param currWidth width of current view
    */
-  private _changeMenuOpenMode(currWidth:number) {
+  public _changeMenuOpenMode(currWidth:number) {
     if (currWidth < this._width) {
       //mobile
       this._mode = "slide";

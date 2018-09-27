@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { ContactFormService } from "../services/contact-form.service";
+
 
 @Component({
   selector: 'app-page-contact',
@@ -9,15 +10,16 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 })
 export class PageContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service :ContactFormService) { }
 
   ngOnInit() { }
 
-  private _phoneNumber: boolean = false;
+  public status = "Send this";
 
-  private contactForm = new FormGroup({
+  public contactForm = new FormGroup({
     customerContact: new FormControl('', [Validators.required, this.phoneOrMailValidator()]),
-    customerMessage: new FormControl('', Validators.required)
+    customerTime: new FormControl(''),
+    customerMessage: new FormControl('', Validators.required),
   })
 
   private phoneOrMailValidator(): ValidatorFn {
@@ -31,14 +33,26 @@ export class PageContactComponent implements OnInit {
     };
   }
 
-  private isPhone(control: AbstractControl):boolean {
+  public isPhone(control: AbstractControl):boolean {
     const phoneRe: RegExp = /^[+0-9]{1,4}[^@a-zA-Z]{9,}$/;
     const phonePassed = phoneRe.test(control.value);
     return phonePassed ? true : false;
   }
 
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.contactForm.value);
+    let json:object = {
+      "contact": this.contactForm.value.customerContact,
+      "when": this.contactForm.value.customerTime,
+      "text": this.contactForm.value.customerMessage,
+    }
+    this.service.sendToApi(json).subscribe(
+      data => {
+        console.log("sent");
+        this.status = "Succesfully sent"
+       },
+        error => console.error(error)
+      );
   }
+
+
 }
