@@ -1,5 +1,12 @@
 # Portfolio
 
+### TO DO
+ - i18 translate the webpage from engoslovak to eng/svk
+ - Add Contact information on me page
+ - Install SEO @angular/tools
+ - install google statistics and probably facebook pixel
+ - develop interface to handle communication with wordpress backend!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
 
 ## Development server

@@ -47,10 +47,12 @@ export class PageContactComponent implements OnInit {
     }
     this.service.sendToApi(json).subscribe(
       data => {
-        console.log("sent");
-        this.status = "Succesfully sent"
+        this.status = "Succesfully sent";
        },
-        error => console.error(error)
+      error => {
+        console.error(error);
+        this.status = "Error occured";
+      }
       );
   }
 
