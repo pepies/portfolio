@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
+import { Component, HostListener , Inject} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -15,14 +16,16 @@ export class AppComponent {
   public _mode: string;
   public _width: number = 1025;
   public _clickOutsideClose: boolean;
+ constructor(@Inject(WINDOW) private window: Window) {}
+
 
   ngOnInit() {
-    this._changeMenuOpenMode(window.innerWidth);
+    this._changeMenuOpenMode(this.window.innerWidth);
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    this._changeMenuOpenMode(window.innerWidth);
+    this._changeMenuOpenMode(this.window.innerWidth);
   }
 
   /**
@@ -36,7 +39,7 @@ export class AppComponent {
    * Close menu on clickRouting - disable at large
    */
   public _menuItemCloseSidebar() {
-    if(window.innerWidth < this._width)
+    if(this.window.innerWidth < this._width)
     this._opened = !this._opened;
   }
 

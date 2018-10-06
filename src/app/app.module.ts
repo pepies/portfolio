@@ -1,3 +1,5 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -22,9 +24,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     PageReferencesComponent,
     PageNotFoundComponent,
   ],
-  imports: [
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
     HttpClientModule,
-    BrowserModule,
+    
     AppRoutingModule,
     ReactiveFormsModule,
     SidebarModule.forRoot()
@@ -32,6 +37,5 @@ import { ReactiveFormsModule } from '@angular/forms';
   providers: [
     InstagramService
   ],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,7 +4,8 @@
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <ul>
       <li>
-        <input type="text" name="contact" maxlength="100" formControlName="customerContact" placeholder="Contact on you"
+        <input type="text" name="contact" maxlength="100" formControlName="customerContact" placeholder="{{placeholderContact}}"
+        (focus)="changePlaceholder()" (focusout)="secretSend()"
         [class.error]="contactForm.controls.customerContact.errors && (contactForm.touched || contactForm.dirty)">
       </li>
       <li *ngIf="isPhone(contactForm.controls.customerContact)">
