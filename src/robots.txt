@@ -1,7 +1,0 @@
-User-Agent: *
-Disallow: 
-
-User-Agent: Googlebot
-Allow: /
-
-Sitemap: https://peter.brecska.sk/sitemap.xml
